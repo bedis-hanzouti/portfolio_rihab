@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card shadow mb-4"> 
+    <div class="card-body">
+    <h1 style="text-align:center;">Connexion</h1><br> 
+    <div class="container mt-5">
+    <div class="row justify-content-md-center">
+    <div class="col-md-6">
+    <form >
+    <div class="form-group">
+    <label >Login</label>
+    <input type="text" (change)="reset()" name="login" class="form-control" 
+    [(ngModel)]="user.email" minlength="5" required>
+    </div>
+    <div class="form-group">
+    <label >Mot de passe</label>
+    <input type="password"  (change)="reset()" name="password" [(ngModel)]="user.mot2pass" 
+class="form-control" minlength="6" required>
+    </div>
+    <div class="text-err" *ngIf="erreur">
+        <p>Login et/ou mot de passe incorrect</p>
+        
+    </div>
+    <div class="text-center">
+    <button type="button"(click)="connected()"class="btn btn-success">Connexion</button>
+    </div>
+    
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
